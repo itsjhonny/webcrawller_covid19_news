@@ -135,6 +135,7 @@ class QuotesSpider(scrapy.Spider):
             self.limit_time = tools.compare_dates(item['dia'])
 
             if self.limit_time:
+                
                 print(self.name_crawl + 'Noticia passou da data limite: ' + item['link'])
                 return
 
