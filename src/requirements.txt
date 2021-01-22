@@ -1,0 +1,7 @@
+scrapy==2.4.1
+bs4==0.0.1
+selenium==3.141.0
+requests==2.25.1
+PyMySQL==0.10.1
+webdriver-manager==3.2.2
+dicttoxml==1.7.4

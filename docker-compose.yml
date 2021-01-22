@@ -1,0 +1,23 @@
+version: '3.0'
+
+services:
+  selenium:
+    image: selenium/standalone-chrome
+    network_mode: "host"
+    volumes:
+    - /dev/shm:/dev/shm 
+    ports:
+    - 4444:4444
+
+  crawler:
+    network_mode: "host" 
+    stdin_open: true
+    tty: true 
+    command:  bash /app/start_bot.sh
+    container_name: "crawler_server"
+       
+    volumes:
+      - ./src:/app
+    working_dir: /app
+    build:       
+      context: src
